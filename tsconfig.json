@@ -12,7 +12,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "incremental": true,
+    "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "src/**/*.ts{,x}"],
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/jest.setup.ts"
+  ],
   "exclude": ["node_modules"]
 }
