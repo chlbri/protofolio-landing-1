@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit',
   purge: [
@@ -7,6 +9,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        _Poppins: ['Poppins'],
+      },
       // screens: {
       //   '3xl': '2000px',
       // },
