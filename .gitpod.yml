@@ -3,10 +3,7 @@
 tasks:
   - name: Configuration
     before: sh .gitpod-config/globalDependencies.sh
-    init: |
-      sh .gitpod-config/dependencies.sh
-      node .gitpod-config/package.js
-      sh .gitpod-config/cleanYaml.sh
+    init: pnpm install
     
 vscode:
   extensions:
