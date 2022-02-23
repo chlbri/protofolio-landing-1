@@ -1,0 +1,30 @@
+env:
+  es2021: true
+  node: true
+extends:
+  - 'eslint:recommended'
+  - 'next'
+  - 'next/core-web-vitals'
+
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: 'jest.setup.ts'
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - "@typescript-eslint"
+  - testing-library/react
+  - react/recommended
+  - jest/recommended
+  - jest/style
+  - react-hooks/recommended
+
+rules:
+  indent: 0
+  "@typescript-eslint/no-explicit-any": off
+  '@typescript-eslint/explicit-module-boundary-types': off
+  linebreak-style: 0
+  quotes: 0
+  semi: 0
