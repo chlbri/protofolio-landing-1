@@ -14,7 +14,7 @@ const NavBar: FC = () => (
       <Logo_Text className="h-8 fill-indigo-600" />
     </div>
 
-    <ul className="pt-3 hidden sm:flex justify-end items-center space-x-5 text-indigo-400 uppercase text-xs">
+    <ul className="pt-3 hidden sm:flex justify-end items-center space-x-5 text-indigo-400 uppercase text-xs lg:text-sm">
       <li className="cursor-pointer">Services</li>
       <li className="cursor-pointer">Prix</li>
       <li className="cursor-pointer">Contact</li>
