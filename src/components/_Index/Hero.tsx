@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Hero: FC = () => {
   return (
-    <section id="hero" className="relative w-full">
+    <section id="hero" className="relative">
       <div className="container mx-auto relative flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
         <div className="flex flex-1 flex-col items-center lg:items-start">
           <h2 className="text-indigo-500 text-2xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
