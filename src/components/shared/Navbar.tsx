@@ -6,7 +6,7 @@ import Logo_Text from './Logo_Text';
 const NavBar: FC = () => (
   <nav
     id="NavBar"
-    className="w-full font-_Poppins font-bold flex items-center mt-6 sm:mt-12 justify-between"
+    className="container mx-auto w-full font-_Poppins font-bold flex items-center mt-6 sm:mt-12 justify-between"
   >
     <div className="flex space-x-5 items-center">
       {/* <div className="h-6 w-6 rounded-full bg-indigo-500" /> */}

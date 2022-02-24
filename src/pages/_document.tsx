@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           />
         </Head>
 
-        <body className="min-w-[350px] ">
+        <body className="min-w-[350px]">
           <Main />
           <NextScript />
         </body>

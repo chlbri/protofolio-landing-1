@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         _Poppins: ['Poppins'],
       },
+      container: {
+        padding: '1rem',
+      },
       // screens: {
       //   '3xl': '2000px',
       // },

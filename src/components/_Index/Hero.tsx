@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const Hero: FC = () => {
   return (
-    <section id="hero">
-      <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
+    <section id="hero" className="relative w-full">
+      <div className="container mx-auto relative flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
         <div className="flex flex-1 flex-col items-center lg:items-start">
           <h2 className="text-indigo-500 text-2xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
             Your bookmark Manager
@@ -25,16 +25,16 @@ const Hero: FC = () => {
           </div>
         </div>
         {/* Image */}
-        <div className="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 relative w-5/6 md:w-2/3 lg:w-7/12 aspect-[3/2]">
+        <div className="justify-center w-5/6 sm:w-2/3 lg:w-1/2  mb-10 md:mb-16 lg:mb-0 relative aspect-[3/2]">
           <Image
             src="/images/hero-bg.png"
             alt="Hero Image"
             layout="fill"
-            className="z-20"
+            className="z-20 "
           />
-          <div className="absolute -right-1/4 -bottom-20 rounded-l-full bg-indigo-500 w-full h-4/5 hidden lg:block"></div>
         </div>
       </div>
+      <div className="absolute right-0 -bottom-20 rounded-l-full bg-indigo-500 w-5/12 h-5/6 hidden lg:block"></div>
     </section>
   );
 };
