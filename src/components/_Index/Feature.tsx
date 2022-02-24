@@ -22,7 +22,7 @@ const Feature: FC<Props> = ({
           right ? 'lg:flex-row-reverse' : 'lg:flex-row'
         }`}
       >
-        <div className="flex w-5/6 sm:w-4/6 lg:w-5/12 justify-center z-10 mb-10 lg:mb-0 relative aspect-[3/2]">
+        <div className="flex w-5/6 sm:w-4/6 lg:w-5/12 justify-center z-10 mb-10 lg:mb-0 relative aspect-[536/346]">
           <Image
             src={imageSrc}
             layout="fill"
