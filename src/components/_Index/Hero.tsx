@@ -30,7 +30,8 @@ const Hero: FC = () => {
             src="/images/hero-bg.png"
             alt="Hero Image"
             layout="fill"
-            className="z-20 "
+            className="z-20"
+            priority
           />
         </div>
       </div>

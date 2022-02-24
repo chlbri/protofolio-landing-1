@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../PrimaryButton';
 type Props = {
   title: string;
   imageSrc?: string;
   desc: string;
-  right?: true;
+  right?: boolean;
   children?: never;
+  imageRatio: string;
 };
 
 const Feature: FC<Props> = ({
@@ -14,6 +15,7 @@ const Feature: FC<Props> = ({
   desc,
   right,
   imageSrc = '/images/illustration-features-tab-1.png',
+  imageRatio,
 }) => {
   return (
     <section className="relative mt-20 lg:mt-24">
@@ -22,7 +24,9 @@ const Feature: FC<Props> = ({
           right ? 'lg:flex-row-reverse' : 'lg:flex-row'
         }`}
       >
-        <div className="flex w-5/6 sm:w-4/6 lg:w-5/12 justify-center z-10 mb-10 lg:mb-0 relative aspect-[536/346]">
+        <div
+          className={`flex w-5/6 sm:w-4/6 lg:w-5/12 justify-center z-10 mb-10 lg:mb-0 relative ${imageRatio} `}
+        >
           <Image
             src={imageSrc}
             layout="fill"
