@@ -1,8 +1,12 @@
 import React, { FC } from 'react';
+import useLang from '../../../lib/locales';
 import Feature from './Feature';
-import data from './data.json';
 
 const Features: FC = () => {
+  const { get } = useLang();
+  const title = get('main.features.title');
+  const description = get('main.features.description');
+  const features: any[] = get('main.features.features');
   return (
     <div
       id="features"
@@ -11,11 +15,11 @@ const Features: FC = () => {
       {/* Heading */}
       <div className="sm:w-3/4 lg:5/12 mx-auto px-2">
         <h1 className="text-3xl text-center text-indigo-500 mb-3">
-          {data.title}
+          {title}
         </h1>
-        <p className="text-center text-gray-500">{data.description}</p>
+        <p className="text-center text-gray-500">{description}</p>
       </div>
-      {data.features.map((feature, i) => (
+      {features.map((feature, i) => (
         <Feature key={i} {...feature} />
       ))}
     </div>

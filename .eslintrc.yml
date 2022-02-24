@@ -2,28 +2,32 @@ env:
   es2021: true
   node: true
 extends:
+  - plugin:jest/recommended
+  - plugin:jest/style
   - eslint:recommended
   - next/core-web-vitals
   - plugin:testing-library/react
   - plugin:react-hooks/recommended
-  - plugin:jest/recommended
-  - plugin:jest/style
 
 parser: "@typescript-eslint/parser"
 parserOptions:
-  project: './tsconfig.json'
+  project: 
+  - './tsconfig.json'
+  - './tests/**/*.ts'
 
   ecmaFeatures:
     jsx: true
   ecmaVersion: 12
   sourceType: module
 plugins:
-  - "@typescript-eslint"
   - jest
+  - "@typescript-eslint"
 
 rules:
   indent: 0
   "@typescript-eslint/no-explicit-any": off
+  "no-unused-vars": off
+  "@typescript-eslint/no-unused-vars": 2
   '@typescript-eslint/explicit-module-boundary-types': off
   linebreak-style: 0
   "import/no-extraneous-dependencies": 1

@@ -25,12 +25,12 @@ const Feature: FC<Props> = ({
         }`}
       >
         <div
-          className={`flex w-5/6 sm:w-4/6 lg:w-5/12 justify-center z-10 mb-10 lg:mb-0 relative ${imageRatio} `}
+          className={`flex w-5/6 sm:w-4/6 lg:w-5/12 justify-center z-10 mb-10 lg:mb-0 relative ${imageRatio}`}
         >
           <Image
             src={imageSrc}
             layout="fill"
-            alt="Feature 1"
+            alt="Feature"
             className="z-20 "
           />
         </div>
