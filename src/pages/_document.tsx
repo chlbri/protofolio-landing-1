@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           />
         </Head>
 
-        <body className="container mx-auto min-w-[350px] p-2">
+        <body className="min-w-[350px] ">
           <Main />
           <NextScript />
         </body>
