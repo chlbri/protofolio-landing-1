@@ -1,6 +1,7 @@
 import create from 'zustand';
 import en from './en';
 import fr from './fr';
+import { State } from './types';
 
 const langs: Record<string, any> = { en, fr };
 const byString = function (o: any, s: string) {
@@ -35,16 +36,22 @@ const byString = function (o: any, s: string) {
 
 type Store = {
   lang: string;
+  langs: Record<string, any>;
   get(str: string): any;
   changeLanguage(str: string): void;
+  init(str: Record<string, any>): void;
+  state: State;
 };
 
 const useLang = create<Store>((set, gette) => ({
   lang: 'en',
+  state: 'idle',
+  langs,
   get: (key: string) => {
-    return byString(langs[gette().lang], key);
+    return byString(gette().langs[gette().lang], key);
   },
   changeLanguage: (lang: string) => set({ lang }),
+  init: (langs: Record<string, any>) => set({ langs }),
 }));
 
 export default useLang;
